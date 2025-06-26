@@ -253,22 +253,15 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 60px 20px;
-    text-align: center;
-  }
 
-  .hero-text,
-  .hero-image {
-    max-width: 100%;
-  }
+    
 
-  .hero-text h1 {
-    font-size: 3rem;
-  }
-
-  .image-wrapper {
-    transform: rotate(5deg);
-  }
+    .brand i {
+        top: 30px;
+        transform: translate(-45px);
+    }
+    .brand span{
+        top: 15px;
+        transform: translate(-40px);
+    }
 }
