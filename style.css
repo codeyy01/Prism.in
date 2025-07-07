@@ -1,63 +1,64 @@
 body {
-  margin: 0;
-  background-color: #dadcdb;
-  overflow-x: hidden;
+    margin: 0;
+    background-color: #e0d8e0;
+    overflow-x: hidden;
 }
 
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 8px 50px;
-  min-height: 100vh;
-  animation: appear 1s ease ;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px 50px;
+    min-height: 100vh;
+    animation: appear 1s ease;
 
 }
 
-@keyframes appear{
-    0%{
+@keyframes appear {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
 .hero-text {
-  max-width: 50%;
+    max-width: 50%;
 }
 
 
 
-.brand{
+.brand {
     animation: slideUp 0.7s ease-out forwards;
-    
+
 }
 
-@keyframes slideUp{
-    0%{
+@keyframes slideUp {
+    0% {
         opacity: 0;
         transform: translateY(30px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.brand span{
+.brand span {
     display: flex;
     position: absolute;
     top: 45px;
     left: 50px;
     font-size: 50px;
     text-align: center;
-    font-weight: 600;
     color: #396882;
     font-family: 'Arimo';
 }
 
-.brand i{
+.brand i {
     position: absolute;
     top: 63px;
     left: 13px;
@@ -66,8 +67,8 @@ body {
 }
 
 .brand img {
-  width: 25px;
-  margin-right: 10px;
+    width: 25px;
+    margin-right: 10px;
 }
 
 
@@ -76,18 +77,21 @@ body {
     position: absolute;
     top: 30%;
     transform: translateY(-30%);
-    font-family: 'Arimo';
-    letter-spacing: -6px;
-    animation: slideRight 2s  ease alternate forwards;
+    letter-spacing: -0.2em;
+
+    animation: slideRight 2s ease alternate forwards;
     opacity: 0;
+
+
 }
 
-@keyframes slideRight{
-    0%{
+@keyframes slideRight {
+    0% {
         opacity: 0;
         transform: translateX(-80px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateX(10px);
     }
@@ -97,66 +101,35 @@ body {
     font-size: 6.5em;
     color: #396882;
     text-align: start;
-    
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    font-size: 7em;
+
 }
 
 .hero-text p {
     margin-top: 15%;
-    letter-spacing: 5px;
-    font-size: 1.9rem;
+    margin-left: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
 }
 
-
-
-.v-line{
-    font-size: 70px;
-    position: absolute;
-    top: -7%;
-    right: 25.9%;
-    animation: down 4s ease alternate forwards;
-    overflow: hidden;
-}
-
-@keyframes down{
-    0%{
-        top: -7%;
-        transform: scale(0);
-    }
-    50%{
-        top: 8%;
-        transform: scaleY(8);
-    }
-    100%{
-        top: 0%;
-        transform: scaleY(7);
-    }
-
-}
-
-.hook{
-    font-size: 70px;
-    position: absolute;
-    right: 26.92%;
-    top: 30%;
-    animation: hold 2s ease alternate forwards;
-
-}
-
-@keyframes hold{
-    0%{
-        top: -5%;
-    }
-}
 
 
 .hero-image {
-  position: relative;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
+    position: relative;
+    width: 45%;
+    height: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
 }
 
 .image-wrapper {
@@ -165,102 +138,95 @@ body {
     justify-content: center;
     position: absolute;
     right: 15%;
-    top: 30%;
+    top: 45%;
     width: 25%;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-    animation: slideLeft 3s ease forwards, swing 4s 3s ease-in-out infinite  alternate-reverse;
+    animation: slideLeft 3s ease forwards, swing 6s 3s ease infinite alternate-reverse;
     transform-style: preserve-3d;
 }
 
-@keyframes slideLeft{
-    0%{
-        transform: rotate(0deg) translateX(300px) translateY(0);
+@keyframes slideLeft {
+    0% {
+        transform: rotate(20deg) translateX(300px) translateY(0);
     }
-    50%,70%{
-        transform: rotate(0deg) translateX(0) translateY(0);
+
+    50%,
+    70% {
+        transform: rotate(20deg) translateX(0) translateY(0);
     }
-    100%{
-        transform: rotate(0deg) translateX(0) translateY(-100px);
+
+    100% {
+        transform: rotate(20deg) translateX(0) translateY(-100px);
     }
 }
 
-@keyframes swing{
-    0%{
-        transform: rotateY(20deg) rotate(0deg) translateX(0) translateY(-100px) ;
-    }
-    100%{
-        transform: rotateY(-20deg) rotate(0deg) translateX(0) translateY(-100px);
-    }
-}
 
-.image-wrapper img{
+.image-wrapper img {
     width: 80%;
     height: auto;
     display: block;
 }
 
 .insta-btn {
-    width: 75px;
-    height: 75px;
-  text-align: center;
-  border: 1px solid #b8b1b1;
-  border-radius: 50%;
-  border-top-left-radius: 20%;
-  border-top-right-radius: 20%;
-  padding: 20px 30px;
-  color: #191130;
-  font-size: 1.15rem;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s ease;
-  position: absolute;
-  bottom: 15%;
-  right: 50%;
-  animation: slideUpBtn 0.8s 2.2s ease-out alternate forwards;
-  opacity: 0;
+    width: 207px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #694b70;
+    border-radius: 40px;
+    padding: 20px 30px;
+    color: #191130;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 17%;
+    right: 50%;
+    animation: slideUpBtn 0.8s 2.2s ease-out alternate forwards;
+    opacity: 0;
+}
+
+.insta-btn p {
+    position: absolute;
+    bottom: -50%;
+    left: 25%;
 }
 
 @keyframes slideUpBtn {
-    0%{
+    0% {
         opacity: 0;
         transform: translateY(50px);
     }
-    100%{
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.insta-btn:hover {
-  background-color: #f0f0f0;
-}
 
-.insta-btn .insta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-  gap: 5px;
-}
 
-.insta i {
-  background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+button i {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    top: 25%;
+    left: 9%;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
 
-    
+
 
     .brand i {
         top: 30px;
         transform: translate(-45px);
     }
-    .brand span{
+
+    .brand span {
         top: 15px;
         transform: translate(-40px);
     }
