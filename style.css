@@ -124,7 +124,6 @@ body {
 .hero-image {
     position: relative;
     width: 45%;
-    height: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,31 +136,31 @@ body {
     display: flex;
     justify-content: center;
     position: absolute;
-    right: 15%;
-    top: 45%;
+    right: 12%;
+    top: 32%;
     width: 25%;
-    animation: slideLeft 3s ease forwards, swing 6s 3s ease infinite alternate-reverse;
+    animation: slideLeft 3s ease forwards;
     transform-style: preserve-3d;
 }
 
 @keyframes slideLeft {
     0% {
-        transform: rotate(20deg) translateX(300px) translateY(0);
+        transform: rotate(20deg) scale(0) /*translateX(300px)*/ translateY(0);
     }
 
-    50%,
-    70% {
-        transform: rotate(20deg) translateX(0) translateY(0);
+    50%
+     {
+        transform: rotate(20deg) scale(0.99) translateX(0) translateY(0);
     }
 
     100% {
-        transform: rotate(20deg) translateX(0) translateY(-100px);
+        transform: rotate(20deg) scale(1) translateX(0) translateY(-20px);
     }
 }
 
 
 .image-wrapper img {
-    width: 80%;
+    width: 85%;
     height: auto;
     display: block;
 }
@@ -170,8 +169,8 @@ body {
     width: 207px;
     height: 30px;
     text-align: center;
-    border: 1px solid #694b70;
-    border-radius: 40px;
+    border: 1px solid #66536a;
+    border-radius: 10px;
     padding: 20px 30px;
     color: #191130;
     font-size: 1.5rem;
@@ -179,17 +178,14 @@ body {
     display: inline-block;
     transition: 0.3s ease;
     position: absolute;
-    bottom: 17%;
-    right: 50%;
-    animation: slideUpBtn 0.8s 2.2s ease-out alternate forwards;
+    bottom: 2%;
+    right: -5%;
+    animation: slideUpBtn 0.99s 1.5s ease-out alternate forwards;
     opacity: 0;
+    background-color: transparent;
 }
 
-.insta-btn p {
-    position: absolute;
-    bottom: -50%;
-    left: 25%;
-}
+
 
 @keyframes slideUpBtn {
     0% {
@@ -203,7 +199,13 @@ body {
     }
 }
 
-
+.insta-btn a {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    text-decoration: none;
+    color: #396882;
+}
 
 button i {
     background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
